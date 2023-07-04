@@ -8,12 +8,12 @@ then
 fi
 
 # Define the source and destination folder
-source=/mnt/c/Users/rouss/Documents/Windows\ Subsystem\ for\ Linux\ \(WSL\)/
-destination=/home/eli_rousseau/Windows_Subsystem_for_Linux/
+source=/mnt/c/Users/rouss/user/source/folder
+destination=/home/destination/folder
 
 # Define the log files
-stdout=/home/eli_rousseau/Windows_Subsystem_for_Linux/BashScripting/WSL/log/W2L_stdout.log
-stderr=/home/eli_rousseau/Windows_Subsystem_for_Linux/BashScripting/WSL/log/W2L_stderr.log
+stdout=/home/destination/folder/log/W2L_stdout.log
+stderr=/home/destination/folder/log/W2L_stderr.log
 
 # Perform the synchronization with rsync tool
 $(which rsync) -ravzh --progress --delete-during "$source" "$destination" > $stdout 2> $stderr
